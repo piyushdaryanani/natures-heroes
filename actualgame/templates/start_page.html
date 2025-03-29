@@ -1,0 +1,19 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nature's Heroes</title>
+  <link rel="stylesheet" href="{% static 'actualgame/gamestyle.css' %}">
+</head>
+<body>
+  <div class="overlay-content">
+    <div class="start-button-container">
+      <a href="{% url 'menu' %}">
+        <img src="{% static 'actualgame/images/startbutton.png' %}"
+             alt="Start Game"
+             class="start-button">
+      </a>
+    </div>
+  </div>
+</body>
+</html>

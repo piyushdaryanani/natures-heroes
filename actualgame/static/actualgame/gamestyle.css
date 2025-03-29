@@ -1,0 +1,32 @@
+/* Minimal styles for the start page */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Background image for the start page */
+  background: url("images/gamestart.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Full viewport overlay */
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Center the start button */
+.start-button-container {
+  position: absolute;
+  bottom: -2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the start button image */
+.start-button {
+  width: 360px; /* Adjust as needed */
+  cursor: pointer;
+}

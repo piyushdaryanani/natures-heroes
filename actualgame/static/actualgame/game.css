@@ -1,0 +1,116 @@
+/* Basic reset and layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background container for the game page with white tint */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+              url("images/gamestart.webp") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Main game area */
+.game-area {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Playable area box */
+.game-box {
+  position: fixed;
+  width: 900px;
+  max-width: 90%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.42);
+  margin-top: -5px; /* Adjust this value as needed */
+}
+
+
+/* Fixed Score display style */
+#score-display {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Bin container styling */
+.bin-container {
+  position: relative;
+  width: 850px;
+  margin: 0 auto 20px auto;
+}
+
+.bin-image {
+  width: 100%;
+  display: block;
+}
+
+/* Drop zone overlays the bin image */
+.dropzone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed transparent;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.dropzone.over {
+  background-color: rgba(0, 255, 0, 0.2);
+  border-color: green;
+}
+
+/* Draggable items container */
+.draggable-items {
+  display: flex;
+  flex-wrap: wrap;         /* so items can move to next line if needed */
+  gap: 20px;               /* spacing between items */
+  justify-content: center; /* center them horizontally */
+  align-items: flex-start; /* top-align all items */
+}
+
+.draggable-item {
+  display: flex;
+  flex-direction: column;  /* stack image and text vertically */
+  align-items: center;     /* center them horizontally within each item */
+  width: 100px;            /* give each item a fixed width */
+  /* optionally set a fixed height or min-height if you want them uniform */
+}
+/* Styling for product names */
+.draggable {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: grab;
+}
+
+.product-name {
+  margin-top: 5px;
+  text-align: center;
+}
